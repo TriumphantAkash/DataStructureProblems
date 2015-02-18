@@ -38,7 +38,40 @@ void inorder_traverse(struct node* p)
 	inorder_traverse(p->right);
 }
 
-void main()
+void preorder_traverse(struct node* p)
+{
+	if(p == NULL)
+		return;
+	printf("%d\n", p->data);
+	preorder_traverse(p->left);
+	preorder_traverse(p->right);
+}
+
+void postorder_traverse(struct node* p)
+{
+	if(p == NULL)
+		return;
+	postorder_traverse(p->left);
+	postorder_traverse(p->right);
+	printf("%d\n", p->data);
+}
+
+int min_element(struct node* root)
+{
+	if(root->left == NULL && root->right == NULL)
+		return root->data;
+	else
+		min_element(root->left);
+}
+
+int max_element(struct node* root)
+{
+	if(root->left == NULL && root->right == NULL)
+		return root->data;
+	else
+		max_element(root->right);
+}
+int main()
 {
 	struct node* root = NULL;
 	root = insert(root, 15);
@@ -46,4 +79,7 @@ void main()
 	root = insert(root, 20);
 
 	inorder_traverse(root);
+	printf("\nMinimum element in the tree is : %d\n", min_element(root));
+	printf("\nMaximum element in the tree is : %d\n", max_element(root));
+	return 0;
 }
