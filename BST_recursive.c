@@ -7,6 +7,27 @@ struct node{
 	struct node* right;
 };
 
+int max(int a, int b)
+{
+	int ret = 0;
+	if(a>b)
+		ret = a;
+	else
+		ret = b;
+	return ret;
+}
+
+int findHeight(struct node* root)
+{
+	if(root == 0)
+		return -1;
+	else{
+		int leftHeight = findHeight(root->left);
+		int rightHeight = findHeight(root->right);
+		int r = 1+max(leftHeight, rightHeight);
+		return r;
+	}
+}
 struct node* getNewNode(int data)
 {
 	struct node* newNode = (struct node*)malloc(sizeof(struct node));
@@ -77,9 +98,13 @@ int main()
 	root = insert(root, 15);
 	root = insert(root, 10);
 	root = insert(root, 20);
+	root = insert(root, 25);
+	root = insert(root, 30);
+	root = insert(root, 2);
 
 	inorder_traverse(root);
 	printf("\nMinimum element in the tree is : %d\n", min_element(root));
 	printf("\nMaximum element in the tree is : %d\n", max_element(root));
+	printf("Height of the Binary tree is : %d\n", findHeight(root));
 	return 0;
 }
