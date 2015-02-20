@@ -23,4 +23,4 @@ $(TARGET):
 	$(CPP) $(CFLAGS) $(SRC_PATH)heap.cpp -o $(BIN_PATH)heap
 
 clean:
-	$(RM) $(BIN_PATH)$(TARGET)
+	$(RM) $(BIN_PATH)*
