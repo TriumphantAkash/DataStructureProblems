@@ -20,6 +20,7 @@ class Node* getNewNode(int data)
 	newNode->right = NULL;
 	return newNode;
 }
+
 class Node* insert(class Node* root, int n)
 {
 	if(root == NULL){//empty tree
@@ -32,6 +33,7 @@ class Node* insert(class Node* root, int n)
 	}
 	return root;
 }
+
 void level_order(class Node* root)
 {
 	if(root == NULL)
