@@ -15,8 +15,8 @@ So, each person works on defferent branches and this is how perforce manges diff
 
 
 
-Used follwing source code quality checking tools in Samsung: (try to find out the potential bugs and make code more sophisticated)
----------------------------------------------------
+hands on experience on follwing source code quality checking tools : (try to find out the potential bugs and make code more sophisticated)
+------------------------------------------------------------------
 - ProtexIP/blackduck (used for open source analysis, code does not hava a plagiarized code, violations etc.)
 - prevent/Coverty (to check potential bugs, memory corruption (using strcpy instead of strncpy), NULL pointer exceptions etc.)
 - Checkpatch before releasing any patch
