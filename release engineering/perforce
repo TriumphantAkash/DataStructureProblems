@@ -1,0 +1,49 @@
+PERFORCE (P4V)
+--------
+
+- A revision control system, manages a central database and master repository
+- CLIENT
+	1) Get latest version in local repository
+	2) Do changes
+	3) checkin code along with a KONA ID (a defect management system) and submit
+		(KONA issue has to be in open state during checkin code to Perforce) 
+	4) file version (3/4) means
+		you have 3rd version
+		total versions are 4
+
+So, each person works on defferent branches and this is how perforce manges different revisions
+
+
+
+Used follwing source code quality checking tools in Samsung: (try to find out the potential bugs and make code more sophisticated)
+---------------------------------------------------
+- ProtexIP/blackduck (used for open source analysis, code does not hava a plagiarized code, violations etc.)
+- prevent/Coverty (to check potential bugs, memory corruption (using strcpy instead of strncpy), NULL pointer exceptions etc.)
+- Checkpatch before releasing any patch
+- 
+
+MATLAB (MATrix Laboratory)
+--------------------------
+- A numerical computing environment and programming language
+- allows
+	matrix manipulation
+	plotting of function and data
+	implementation of algorithms
+	creation of user interface
+	interfacing with programs written in other language
+	
+
+GIT
+---
+
+
+
+
+
+
+Simulink
+--------
+-Graphical multidomain simulation
+-model based design for dynamic and embedded system
+
+

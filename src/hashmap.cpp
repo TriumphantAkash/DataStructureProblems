@@ -4,14 +4,17 @@ Hashmaps are MAGICAL
 Using hashmap we can search an element in O(1) i.e. constant time
 */
 
+/*
+
+*/
 #include <string>
 #include <iostream>
-#include <map>
+#include <unordered_map>		//This is 
 using namespace std;
 
 int main()
 {
-	map<string, int> M;
+	unordered_map<string, int> M;
 	M["Akash"]=12;
 	M["Mayank"]=14;
 //OR do it this way
@@ -24,12 +27,12 @@ int main()
 
 	cout<<"Size of the map is: "<<M.size()<<endl;
 //Iterating through the list
-	for(map<string, int>::iterator i=M.begin(); i!=M.end(); i++)
+	for(unordered_map<string, int>::iterator i=M.begin(); i!=M.end(); i++)
 		cout<<i->first<<":"<<i->second<<endl;	
 
 
 //serching an element
-	map<string, int>::iterator j;
+	unordered_map<string, int>::iterator j;
 	j = M.find("Jay");
 	cout<<"printing the searched element :"<<j->second<<endl;
 	return 0;

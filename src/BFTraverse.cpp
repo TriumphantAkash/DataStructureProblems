@@ -38,6 +38,7 @@ void level_order(class Node* root)
 {
 	if(root == NULL)
 		cout<<"empty tree!"<<endl;
+//whenever I pop a node form the queue, I insert it's children in the queue
 	else{
 		class Node* p;
 		queue<Node*> Q;
