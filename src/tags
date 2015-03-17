@@ -1,0 +1,81 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+A	quicksort1.cpp	/^		int A[15];$/;"	m	class:Quicksort	file:
+BIN_PATH	Makefile	/^BIN_PATH=..\/bin\/$/;"	m
+CC	Makefile	/^CC = gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -g -Wall$/;"	m
+CPP	Makefile	/^CPP = g++$/;"	m
+H	heap.cpp	/^		int H[20];$/;"	m	class:Heap	file:
+Heap	heap.cpp	/^Heap::Heap()$/;"	f	class:Heap
+Heap	heap.cpp	/^class Heap{$/;"	c	file:
+KthElement	KthElement.cpp	/^KthElement(int* A, int p, int r, int k)$/;"	f
+MAX	circular_queue.cpp	/^const int MAX = 5;$/;"	v
+Node	BFTraverse.cpp	/^class Node{$/;"	c	file:
+Quicksort	quicksort1.cpp	/^Quicksort::Quicksort()$/;"	f	class:Quicksort
+Quicksort	quicksort1.cpp	/^class Quicksort{$/;"	c	file:
+SRC_PATH	Makefile	/^SRC_PATH=.\/$/;"	m
+TARGET	Makefile	/^TARGET = balaji_problem BST_implementation BST_recursive BFTraverse hashmap heap$/;"	m
+a	circular_queue.cpp	/^	int a[MAX],front,rear;$/;"	m	class:cqueue	file:
+binary_search	balaji_problem.c	/^int binary_search(int* A, int p, int r, int n)$/;"	f
+cqueue	circular_queue.cpp	/^	cqueue()$/;"	f	class:cqueue
+cqueue	circular_queue.cpp	/^class cqueue$/;"	c	file:
+data	BFTraverse.cpp	/^	int data;$/;"	m	class:Node	file:
+data	BST_recursive.c	/^	int data;$/;"	m	struct:node	file:
+delete_from_heap	heap.cpp	/^int Heap::delete_from_heap()$/;"	f	class:Heap
+deletion	circular_queue.cpp	/^int cqueue :: deletion()$/;"	f	class:cqueue
+display	circular_queue.cpp	/^void cqueue :: display()$/;"	f	class:cqueue
+findHeight	BST_recursive.c	/^int findHeight(struct node* root)$/;"	f
+front	circular_queue.cpp	/^	int a[MAX],front,rear;$/;"	m	class:cqueue	file:
+getNewNode	BFTraverse.cpp	/^class Node* getNewNode(int data)$/;"	f
+getNewNode	BST_recursive.c	/^struct node* getNewNode(int data)$/;"	f
+inorder_traverse	BST_implementation.c	/^void inorder_traverse(struct node* p)$/;"	f
+inorder_traverse	BST_recursive.c	/^void inorder_traverse(struct node* p)$/;"	f
+insert	BFTraverse.cpp	/^class Node* insert(class Node* root, int n)$/;"	f
+insert	BST_implementation.c	/^void insert(struct node** root_addr, int n)$/;"	f
+insert	BST_recursive.c	/^struct node* insert(struct node* root, int n)$/;"	f
+insert	circular_queue.cpp	/^void cqueue :: insert(int val)$/;"	f	class:cqueue
+insert_in_heap	heap.cpp	/^void Heap::insert_in_heap(int a)$/;"	f	class:Heap
+left	BFTraverse.cpp	/^	class Node* left;$/;"	m	class:Node	typeref:class:Node::Node	file:
+left	BST_implementation.c	/^	struct node* left;$/;"	m	struct:node	typeref:struct:node::node	file:
+left	BST_recursive.c	/^	struct node* left;$/;"	m	struct:node	typeref:struct:node::node	file:
+level_order	BFTraverse.cpp	/^void level_order(class Node* root)$/;"	f
+main	BFTraverse.cpp	/^int main()$/;"	f
+main	BST_implementation.c	/^int main()$/;"	f
+main	BST_recursive.c	/^int main()$/;"	f
+main	balaji_problem.c	/^int main()$/;"	f
+main	circular_queue.cpp	/^int main()$/;"	f
+main	hashmap.cpp	/^int main()$/;"	f
+main	hashset.cpp	/^int main()$/;"	f
+main	heap.cpp	/^int main()$/;"	f
+main	quicksort.cpp	/^int main()$/;"	f
+main	quicksort1.cpp	/^int main()$/;"	f
+max	BST_recursive.c	/^int max(int a, int b)$/;"	f
+max_element	BST_recursive.c	/^int max_element(struct node* root)$/;"	f
+merge	merge_sort.cpp	/^void merge(int* A, int p, int q, int r)$/;"	f
+merge_sort	merge_sort.cpp	/^void merge_sort(int* A, int p, int r)$/;"	f
+min_element	BST_recursive.c	/^int min_element(struct node* root)$/;"	f
+node	BST_implementation.c	/^struct node{$/;"	s	file:
+node	BST_recursive.c	/^struct node{$/;"	s	file:
+p	merge_sort.cpp	/^class Node *p = new Node();$/;"	v	typeref:class:Node
+percolate_down	heap.cpp	/^void Heap::percolate_down()$/;"	f	class:Heap
+percolate_up	heap.cpp	/^void Heap::percolate_up()$/;"	f	class:Heap
+postorder_traverse	BST_recursive.c	/^void postorder_traverse(struct node* p)$/;"	f
+preorder_traverse	BST_recursive.c	/^void preorder_traverse(struct node* p)$/;"	f
+print	quicksort1.cpp	/^void Quicksort::print()$/;"	f	class:Quicksort
+print_heap	heap.cpp	/^void Heap::print_heap()$/;"	f	class:Heap
+quicksort	quicksort.cpp	/^void quicksort(int* A, int p, int r)$/;"	f
+randomizedPartition	quicksort1.cpp	/^int Quicksort::randomizedPartition(int p, int r)$/;"	f	class:Quicksort
+randomizedpartition	KthElement.cpp	/^int randomizedpartition(int* A, int p, int r)$/;"	f
+randomizedpartition	quicksort.cpp	/^int randomizedpartition(int* A, int p, int r)$/;"	f
+rear	circular_queue.cpp	/^	int a[MAX],front,rear;$/;"	m	class:cqueue	file:
+right	BFTraverse.cpp	/^	class Node* right;$/;"	m	class:Node	typeref:class:Node::Node	file:
+right	BST_implementation.c	/^	struct node* right;$/;"	m	struct:node	typeref:struct:node::node	file:
+right	BST_recursive.c	/^	struct node* right;$/;"	m	struct:node	typeref:struct:node::node	file:
+sort	quicksort1.cpp	/^void Quicksort::sort(int p, int r)$/;"	f	class:Quicksort
+swap	heap.cpp	/^void Heap::swap(int* a, int* b)$/;"	f	class:Heap
+temp	heap.cpp	/^		int temp;$/;"	m	class:Heap	file:
+val	BST_implementation.c	/^	int val;$/;"	m	struct:node	file:

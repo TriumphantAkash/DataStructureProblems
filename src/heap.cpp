@@ -1,79 +1,127 @@
-/*
-In this program I am trying to implement heap
-The compilation is file but my program has some logical error
-I am unable to debug it by now
+/* Functionality	:	This program is an implementation of heap using array that based on the following rule
+ * 			 	parent index i, child index 2i+1, 2i+2
+ * 			 	child index i, parent index i-1/2
+				Also, this program contains all the functions(percolate_up, percolate_down etc.
+				that are used in the heap insert and delete operations)
+ * Author 		: 	Akash Chaturvedi
+ * Instructor 		: 	Dr. Neeraj Gupta
+ * Course		:	CS5343.501
 */
-
-//parent index i				child index 2i+1, 2i+2
-//child index i					parent index i-1/2
-
 #include <iostream>
 using namespace std;
 
-void insert_heap(int* H, int* tail_addr, int a)
+class Heap{
+	private:
+		int H[20];
+		int temp;
+	public:
+		Heap();
+		void swap(int*, int*);
+		void print_heap(void);
+		void percolate_up(void);
+		void percolate_down(void);
+		void insert_in_heap(int);
+		int delete_from_heap(void);
+		void heapify(void);
+};
+
+void Heap::swap(int* a, int* b)
 {
-	int tail = *tail_addr;
-	int temp;
-	*tail_addr = *tail_addr + 1;
-	H[*tail_addr] = a;
-	//percolate up
-	if(*tail_addr>=1){
-		while(H[*tail_addr]>=H[*tail_addr-1]/2){	//if the inserted element is bigger than it's parent then percolate up
-		//swap(H[tail], H[tail-1]/2);
-			temp = H[*tail_addr];
-			H[*tail_addr] = H[*tail_addr-1/2];
-			H[(*tail_addr - 1)/2] = temp;
-			
-			if (*tail_addr < 1)
-				break;
-		}
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+void Heap::print_heap()
+{
+	int i=1;
+	while(i<=H[0]){
+		cout<<H[i]<<" ";
+		i++;
 	}
-	
+	cout<<endl;
 }
 
-int delete_from_heap(int* H, int* tail_addr)
+Heap::Heap()
 {
-	int ret = H[0];		//return the root element becasue this is the max element in the heap, it's a max heap
-	H[0] = H[*tail_addr];	//replace root with tail element
-	
-	int i = 0;			//we will percolate down H[0], untill it reaches its appropriate place
+	H[0] = 0;
+}
 
-	*tail_addr = *tail_addr - 1;
-	
-	while(H[i]<2*i+1 || H[i]<2*i+1 ? true : false){
-		if(H[i]<2*i+1){
-			swap(H[i], H[2*i+1]);
-			i=2*i+1;
+
+void Heap::percolate_up()
+{
+	int i = H[0];
+	int n = H[i];
+	while(n>=H[i/2] && i>=2){
+		swap(&H[i], &H[i/2]);
+		i = i/2;
+	}
+}
+
+void Heap::percolate_down()
+{
+	int n = H[1];
+	int i = 1;
+	while((n<=H[2*i] || n<=H[2*i+1]) && (2*i+1) <= H[0]){
+		if(H[2*i] > H[2*i+1]){
+			swap(&H[i], &H[2*i]);
+			i = 2*i;
 		}else{
-			swap(H[i], H[2*i+2]);
-			i=2*i+2;
+			swap(&H[i], &H[2*i+1]);
+			i = 2*i+1;
 		}
 	}
-
-
-	return ret;
 }
+
+void Heap::insert_in_heap(int a)
+{
+	H[0] = H[0]+1;
+	H[H[0]] = a;
+	percolate_up();
+}
+
+int Heap::delete_from_heap()
+{
+	int ret = H[1];
+	H[1]=H[H[0]];
+	H[0] = H[0]-1;
+	percolate_down();
+	return ret;	
+}
+
 int main()
 {
-	int A[15]={2,8,1,5,3,4,7,9,6,10,15,13,14,11,12}; 
-	int HEAP[15];
-	int tail = -1;
 	int i;
+	int sorted_heap[20];
 	//inserting element in the heap
-	for(i=0;i<15;i++){
-		insert_heap(HEAP, &tail, A[i]);
-	}
+	class Heap h;
+	h.insert_in_heap(8);
+	h.insert_in_heap(7);
+	h.insert_in_heap(67);
+	h.insert_in_heap(45);
+	h.insert_in_heap(2);
+	h.insert_in_heap(1);
+	h.insert_in_heap(53);
+	h.insert_in_heap(63);
+	h.insert_in_heap(34);
+	h.insert_in_heap(2);
+	h.insert_in_heap(15);
+	h.insert_in_heap(5);
+	h.insert_in_heap(4);
+	h.insert_in_heap(23);
+	h.insert_in_heap(1);
 
-	//printing heap
-	for(i=0;i<=14;i++){
-		cout<<HEAP[i]<<endl;
-	}
-	int n = 15;
-	/*To sort the heap we will keep on deleting from the heap and store it in the last index in the array*/
-	for(i = n-1; i>0; i++){
-		A[i]=delete_from_heap(HEAP, &tail);
-	}
+	cout<<"printing initial heap"<<endl;
+	h.print_heap();	
 
+	//storing the sorted numbers in local array
+	for(i = 0;i<15;i++)
+		sorted_heap[i] = h.delete_from_heap();
+
+	cout<<"printing the sorted list:"<<endl;
+	for(i = 0;i<15;i++)
+		cout<<sorted_heap[i]<<" ";
+	cout<<endl;
+	
 	return 0;
 }
 
